@@ -16,6 +16,7 @@ provider "tfe" {
 variable "tfe_token" {
   description = "The token"
   type        = string
+  default     = ""
 }
 
 locals {
