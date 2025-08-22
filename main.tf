@@ -10,7 +10,7 @@ terraform {
 
 provider "tfe" {
     hostname = "app.terraform.io"
-    token    = var.tfe_token
+    token = var.tfe_token != "" ? var.tfe_token : env("TFE_TOKEN")
 }
 
 variable "tfe_token" {
