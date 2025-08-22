@@ -13,6 +13,11 @@ provider "tfe" {
     token    = var.tfe_token
 }
 
+variable "tfe_token" {
+  description = "The token"
+  type        = string
+}
+
 locals {
   organization_name = "test-yashi" 
 
